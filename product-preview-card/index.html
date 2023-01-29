@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Ovo je okej, ali ako je u istom direktorijumu, stavi ./ jer nekad hoće da zeza valja na linuxu. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Nije zamerka. Uvek gledaj da uđe u naviku da stavljaš favicon -->
+    <!-- https://www.w3schools.com/html/html_favicon.asp -->
 
     <title>Gabrielle Essenece Eau De Parfum</title>
 </head>
@@ -17,17 +19,18 @@
     <section class="product">
         <div class="flex-product">
             <div class="box-img">
-                <img src="./images/image-product-desktop.jpg" alt="">
+                <img src="./images/image-product-desktop.jpg" alt=""><!-- Nije greška, ali dobra praksa je da uvek staviš neku vrednost za alt atribut. -->
+                <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform -->
             </div>
             <div class="box-text">
-                <h1>PERFUME</h1>
+                <h1>PERFUME</h1><!-- Ovo je okej, ali je dobra praksa da preko css - a biraš kakva slova ti trebaju. -->
                 <h2>Gabrielle Essenece Eau De Parfum</h2>
                 <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
                 <div class="box-price">
                     <h1>$149.99</h1>
                     <h2>$169.99</h2>
                 </div>
-                <button><i class="fa fa-shopping-cart"></i>Add to Cart</button>
+                <button><i class="fa fa-shopping-cart"></i>Add to Cart</button><!-- Ovo je dobro. Isto može i <a> tag ako ti treba funkcionalnost linka. Čisto jedan info -->
             </div>
         </div>
     </section>

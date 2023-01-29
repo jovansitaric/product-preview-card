@@ -16,21 +16,31 @@
 }
 
 .box-img img{
-    width: 400px;
+    width: 400px; /* Ako daješ fiksnu veličinu u pixelima za sliku, uvek stavi height auto i svojstvo object-fit. Pogledaj link zašto https://www.w3schools.com/css/css3_object-fit.asp */
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
 .box-text{
     width: 400px;
-    background-color: white;
+    background-color: white; /* Odlično. Jedan info za background svojstvo. Ako menjaš samo boju pozadine, koristi background-color, jer masovno ljudi koriste background a to postavlja i boju, i background-image, background-repeat, itd. */
     padding: 40px 40px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
+/* Možeš napraviti globalne početne stilove za h1, h2, h3, p, a itd. Posle ako ti treba nešto da menjaš, samo overrideuješ. Jer kad je veći sajt, po pravilu lupam h1 ima font-size: 42px, font-weight: 700, letter-spacing: 1px, itd. Ne moraš uvek da postavljaš ta svojstva */
+/* Npr: svi linkovi na sajtu da budu narandžaste boje, bold, bez donje linije: 
+    a {
+        color: orange;
+        font-weight: bold;
+        text-decoration: none;
+    }
+*/
+/* Posle ako želiš u nekoj sekciji da menjaš npr boju linka, ne moraš stavljati i bold, i da brišeš donju liniju. */
+
 .box-text h1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Ovo može da ide u globalni stil, svi h1 da su font-family Montserrat */
     padding-bottom: 30px;
     font-size: 17px;
     font-weight: 500;
@@ -39,7 +49,7 @@
 }
 
 .box-text h2{
-    font-family: 'Fraunces', serif;
+    font-family: 'Fraunces', serif; /* Isto kao gore, svi h2 Fraunces */
     font-size: 45px;
     line-height: 40px;
     padding-bottom: 30px;
@@ -48,7 +58,7 @@
 
 .box-text p{
     font-size: 19px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Isto i za paragraf kao ovi gore*/
     line-height: 30px;
     color: hsl(228, 12%, 48%);
     font-weight: 500;
@@ -79,11 +89,11 @@
 }
 
 button{
-    color: white;
+    color: white; /* Okej je al neko pravilo prakse i lakše manipulacije bojom. Ili hex vrednosti ili hsl, rgb itd. */
     background-color: #3D8168;
     margin-top: 25px;
-    width: 325px;
-    height: 63px;
+    width: 325px; /* Širina dugmeta uvek zavisi od sadržaja. Ako ti baš treba neka određena veličina, radi preko paddinga. Jer kad budeš imao tipa samo tri četiri slova ili budeš menjao njihovu veličinu, dugme ti ostaje fiksno. */
+    height: 63px; /* Isto kao i za širinu, koristi padding */
     cursor: pointer;
     border-radius: 10px;
     font-size: 20px;
